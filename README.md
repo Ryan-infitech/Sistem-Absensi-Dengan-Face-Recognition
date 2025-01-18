@@ -2,6 +2,9 @@
 
 Sistem absensi berbasis cloud yang mengimplementasikan teknologi pengenalan wajah (face recognition) dengan integrasi cloud computing dan AWS DynamoDB .
 
+[![Documentation](https://img.shields.io/badge/Documentation-00A4EF?style=for-the-badge&logo=book&logoColor=white)](https://drive.google.com/file/d/10vniyWnw5LSTk-cXOhuWnNRsi9TZY3YB/view?usp=sharing)
+
+
 ## Gambaran Umum
 
 Proyek ini mengimplementasikan sistem absensi otomatis menggunakan teknologi pengenalan wajah, komputasi awan, dan AWS DynamoDB untuk meningkatkan akurasi dan transparansi dalam pencatatan kehadiran. Sistem ini dilengkapi dengan aplikasi client yang ringan, pemrosesan berbasis cloud, dan kemampuan pemantauan secara real-time.
@@ -33,10 +36,11 @@ Sistem terdiri dari tiga komponen utama:
 ![python](./readme/icons8-python.gif)
 ![](./readme/deepface.gif)
 ![](./readme/aws.gif)
+![](./readme/ngrokk.gif)
 ![](./readme/googlecolab.gif)
 ![](./readme/opencv.gif)
 ![](./readme/websokett.gif)
-![](<img src="./readme/ngrok.avif" width="64" height="64" alt="ngrok logo">)
+
 
 ## Fitur
 
