@@ -20,6 +20,7 @@ Sistem terdiri dari tiga komponen utama:
 
    ![](./readme/Client.py.png)
 
+    <br>
 2. **Pemrosesan Server (`server.ipynb`)**
    - Berjalan di Google Colaboratory
    - Menangani pemrosesan pengenalan wajah
@@ -27,7 +28,8 @@ Sistem terdiri dari tiga komponen utama:
    - Memproses data kehadiran
 
    ![](./readme/Server.ipynb.png)
-
+   
+    <br>
 3. **Dashboard Admin (`dashboard.py`)**
    - Pemantauan kehadiran secara real-time
    - Antarmuka pelaporan interaktif
@@ -35,6 +37,8 @@ Sistem terdiri dari tiga komponen utama:
    - Kontrol administratif
 
     ![](./readme/Dasboard.py.png)
+
+    <br>
 
 ## Tech Stack
 
