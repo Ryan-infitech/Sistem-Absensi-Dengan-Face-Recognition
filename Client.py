@@ -179,7 +179,7 @@ class FaceRecognitionClient:
             print(f"Client error: {e}")
 
 def main():
-    server_uri = "wss://00c8-34-82-0-155.ngrok-free.app"
+    server_uri = "wss:// URL TUNNELING NGROK .app"
     client = FaceRecognitionClient(server_uri)
     asyncio.run(client.start())
 

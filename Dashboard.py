@@ -8,8 +8,8 @@ from boto3.dynamodb.conditions import Key, Attr
 import pytz
 
 # AWS Configuration
-AWS_ACCESS_KEY = 'AKIAZAI4HB6HIQOTKD5L'
-AWS_SECRET_KEY = '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'
+AWS_ACCESS_KEY = 'PASTEKEYANDA'
+AWS_SECRET_KEY = 'PASTEKEYANDA'
 AWS_REGION = 'ap-southeast-1'
 TABLE_NAME = 'Attendance'
 
