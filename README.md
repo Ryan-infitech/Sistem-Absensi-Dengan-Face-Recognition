@@ -18,11 +18,15 @@ Sistem terdiri dari tiga komponen utama:
    - Mendeteksi wajah dan mengirim data ke server cloud
    - Memberikan umpan balik visual untuk deteksi wajah
 
+   ![](./readme/Client.py.png)
+
 2. **Pemrosesan Server (`server.ipynb`)**
    - Berjalan di Google Colaboratory
    - Menangani pemrosesan pengenalan wajah
    - Mengelola interaksi dengan AWS DynamoDB
    - Memproses data kehadiran
+
+   ![](./readme/Server.ipynb.png)
 
 3. **Dashboard Admin (`dashboard.py`)**
    - Pemantauan kehadiran secara real-time
@@ -30,7 +34,9 @@ Sistem terdiri dari tiga komponen utama:
    - Visualisasi analitik
    - Kontrol administratif
 
-## Teknologi yang Digunakan
+    ![](./readme/Dasboard.py.png)
+
+## Tech Stack
 
 
 ![python](./readme/icons8-python.gif)
@@ -72,20 +78,38 @@ Sistem terdiri dari tiga komponen utama:
     pip install -r requirements ...
     ```
 
-3. Konfigurasi kredensial AWS:
-- Siapkan file kredensial AWS
-- Konfigurasi akses DynamoDB
-
-4. Menjalankan komponen:
+3. konfigurasi (`Ngrok`) untuk tunneling
     ```bash
+    !pip install pyngrok
+     from pyngrok import ngrok
+
+    # Ganti TOKEN yang anda punya dari dashboard ngrok.
+    
+    ngrok.set_auth_token("TOKEN")
+    
+    # Start ngrok
+    public_url = ngrok.connect(8765)
+    print('Public URL:', public_url) ```
+
+    exs: Public URL: NgrokTunnel: "https:// URL .app"
+
+    pastekan url ke ("Client.py")
+    -> server_uri = "wss:// URL .app"
+
+4. Konfigurasi kredensial AWS:
+   - Siapkan file kredensial AWS
+   - Konfigurasi akses DynamoDB
+
+5. Menjalankan komponen:
+    ```bash
+    # Buka dan jalankan server.ipynb di Google Colaboratory
+    Server.ipynb
+
     # Menjalankan aplikasi client
     python client.py
 
-    # Menjalankan dashboard
+    # Buka dan jalankan dashboard
     python dashboard.py
-
-    # Buka dan jalankan server.ipynb di Google Colaboratory
-    Server.ipynb
     ```
 
 ## Keterbatasan Saat Ini
@@ -115,9 +139,6 @@ Kontribusi untuk meningkatkan sistem ini sangat disambut. Silakan ikuti langkah-
 4. Push ke branch
 5. Buat Pull Request
 
-## Lisensi
-
-[...]
 
 ## Kontak
 
