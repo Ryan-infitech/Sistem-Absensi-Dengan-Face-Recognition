@@ -137,11 +137,12 @@ Sistem terdiri dari tiga komponen utama:
 
 Kontribusi untuk meningkatkan sistem ini sangat disambut. Silakan ikuti langkah-langkah berikut:
 
-1. Fork repositori
-2. Buat branch fitur
-3. Commit perubahan Anda
-4. Push ke branch
-5. Buat Pull Request
+1. Beri Star repository ini
+2. Fork repositori
+3. Buat branch fitur
+4. Commit perubahan Anda
+5. Push ke branch
+6. Buat Pull Request
 
 
 ## Kontak
