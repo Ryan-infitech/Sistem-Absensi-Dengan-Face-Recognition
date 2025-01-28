@@ -1,47 +1,51 @@
-# Sistem Absensi Face Recognition
 
-Sistem absensi berbasis cloud yang mengimplementasikan teknologi pengenalan wajah (face recognition) dengan integrasi cloud computing dan AWS DynamoDB .
+# Face Recognition Attendance System
+
+A cloud-based attendance system that implements face recognition technology with cloud computing and AWS DynamoDB integration.
 
 [![Documentation](https://img.shields.io/badge/Documentation-00A4EF?style=for-the-badge&logo=book&logoColor=white)](https://drive.google.com/file/d/10vniyWnw5LSTk-cXOhuWnNRsi9TZY3YB/view?usp=sharing)
 
+## Overview
 
-## Gambaran Umum
+This project implements an automatic attendance system using face recognition technology, cloud computing, and AWS DynamoDB to enhance accuracy and transparency in attendance recording. The system features a lightweight client application, cloud-based processing, and real-time monitoring capabilities.
 
-Proyek ini mengimplementasikan sistem absensi otomatis menggunakan teknologi pengenalan wajah, komputasi awan, dan AWS DynamoDB untuk meningkatkan akurasi dan transparansi dalam pencatatan kehadiran. Sistem ini dilengkapi dengan aplikasi client yang ringan, pemrosesan berbasis cloud, dan kemampuan pemantauan secara real-time.
+## System Architecture
 
-## Arsitektur Sistem
+The system consists of three main components:
 
-Sistem terdiri dari tiga komponen utama:
+1. **Client Application (`client.py`)**
 
-1. **Aplikasi Client (`client.py`)**
-   - Menangkap video secara real-time
-   - Mendeteksi wajah dan mengirim data ke server cloud
-   - Memberikan umpan balik visual untuk deteksi wajah
+   - Captures real-time video
+   - Detects faces and sends data to cloud server
+   - Provides visual feedback for face detection
 
    ![](./readme/Client.py.png)
 
     <br>
-2. **Pemrosesan Server (`server.ipynb`)**
-   - Berjalan di Google Colaboratory
-   - Menangani pemrosesan pengenalan wajah
-   - Mengelola interaksi dengan AWS DynamoDB
-   - Memproses data kehadiran
+
+2. **Server Processing (`server.ipynb`)**
+
+   - Runs on Google Colaboratory
+   - Handles face recognition processing
+   - Manages AWS DynamoDB interactions
+   - Processes attendance data
 
    ![](./readme/Server.ipynb.png)
-   
-    <br>
-3. **Dashboard Admin (`dashboard.py`)**
-   - Pemantauan kehadiran secara real-time
-   - Antarmuka pelaporan interaktif
-   - Visualisasi analitik
-   - Kontrol administratif
 
-    ![](./readme/Dasboard.py.png)
+    <br>
+
+3. **Admin Dashboard (`dashboard.py`)**
+
+   - Real-time attendance monitoring
+   - Interactive reporting interface
+   - Analytics visualization
+   - Administrative controls
+
+   ![](./readme/Dasboard.py.png)
 
     <br>
 
 ## Tech Stack
-
 
 ![python](./readme/icons8-python.gif)
 ![](./readme/deepface.gif)
@@ -51,104 +55,104 @@ Sistem terdiri dari tiga komponen utama:
 ![](./readme/opencv.gif)
 ![](./readme/websokett.gif)
 
+## Features
 
-## Fitur
+- Real-time face detection and recognition
+- Cloud-based processing for better scalability
+- Secure data storage in AWS DynamoDB
+- Interactive dashboard for attendance monitoring
+- Visual feedback system
+- Automatic attendance recording
 
-- Deteksi dan pengenalan wajah secara real-time
-- Pemrosesan berbasis cloud untuk skalabilitas yang lebih baik
-- Penyimpanan data yang aman di AWS DynamoDB
-- Dashboard interaktif untuk pemantauan kehadiran
-- Sistem umpan balik visual
-- Pencatatan kehadiran otomatis
-
-## Prasyarat
+## Prerequisites
 
 - Python 3.x
-- Akun AWS dengan akses DynamoDB
-- Akun Google (untuk Colaboratory)
-- Koneksi internet yang stabil
-- Paket Python yang diperlukan (lihat requirements.txt)
+- AWS Account with DynamoDB access
+- Google Account (for Colaboratory)
+- Stable internet connection
+- Required Python packages (see requirements.txt)
 
-## Instalasi
+## Installation
 
-1. Clone repositori:
-    ```bash
-    git clone [url-repositori]
-    cd face-recognition-attendance
-    ```
+1. Clone repository:
 
-2. Instalasi paket yang diperlukan:
-    ```bash
-    pip install -r requirements ...
-    ```
+   ```bash
+   git clone [repository-url]
+   cd face-recognition-attendance
+   ```
 
-3. konfigurasi (`Ngrok`) untuk tunneling
-    ```bash
-    !pip install pyngrok
-     from pyngrok import ngrok
+2. Install required packages:
 
-    # Ganti TOKEN yang anda punya dari dashboard ngrok.
-    
-    ngrok.set_auth_token("TOKEN")
-    
-    # Start ngrok
-    public_url = ngrok.connect(8765)
-    print('Public URL:', public_url) ```
+   ```bash
+   pip install -r requirements ...
+   ```
 
-    exs: Public URL: NgrokTunnel: "https:// URL .app"
+3. Configure `Ngrok` for tunneling:
 
-    pastekan url ke ("Client.py")
-    -> server_uri = "wss:// URL .app"
+   ```bash
+   !pip install pyngrok
+   from pyngrok import ngrok
 
-4. Konfigurasi kredensial AWS:
-   - Siapkan file kredensial AWS
-   - Konfigurasi akses DynamoDB
+   # Replace with your token from ngrok dashboard
+   ngrok.set_auth_token("TOKEN")
 
-5. Menjalankan komponen:
-    ```bash
-    # Buka dan jalankan server.ipynb di Google Colaboratory
-    Server.ipynb
+   # Start ngrok
+   public_url = ngrok.connect(8765)
+   print('Public URL:', public_url)
+   ```
 
-    # Menjalankan aplikasi client
-    python client.py
+   Example: Public URL: NgrokTunnel: "https:// URL .app"
 
-    # Buka dan jalankan dashboard
-    python dashboard.py
-    ```
+   Paste the URL into ("Client.py")
+   -> server_uri = "wss:// URL .app"
 
-## Keterbatasan Saat Ini
+4. Configure AWS credentials:
 
-- Membutuhkan koneksi internet yang stabil
-- Akurasi pengenalan wajah bergantung pada kualitas gambar dan pencahayaan
-- Batasan waktu sesi Google Colaboratory
-- Latensi pemrosesan bergantung pada kondisi jaringan
+   - Set up AWS credential file
+   - Configure DynamoDB access
 
-## Rencana Pengembangan
+5. Run components:
 
-1. Migrasi ke infrastruktur cloud yang lebih stabil
-2. Implementasi mekanisme backup otomatis
-3. Peningkatan akurasi pengenalan wajah
-4. Kemampuan mode offline
-5. Fitur keamanan lanjutan
+   ```bash
+   # Open and run server.ipynb in Google Colaboratory
+   Server.ipynb
 
+   # Run client application
+   python client.py
 
+   # Open and run dashboard
+   python dashboard.py
+   ```
 
-## Kontribusi
+## Current Limitations
 
-Kontribusi untuk meningkatkan sistem ini sangat disambut. Silakan ikuti langkah-langkah berikut:
+- Requires stable internet connection
+- Face recognition accuracy depends on image quality and lighting
+- Google Colaboratory session time limits
+- Processing latency depends on network conditions
 
-1. Beri Star repository ini
-2. Fork repositori
-3. Buat branch fitur
-4. Commit perubahan Anda
-5. Push ke branch
-6. Buat Pull Request
+## Development Plans
 
+1. Migration to more stable cloud infrastructure
+2. Implementation of automatic backup mechanisms
+3. Face recognition accuracy improvements
+4. Offline mode capabilities
+5. Advanced security features
 
-## Kontak
+## Contribution
 
-Jika Anda memiliki pertanyaan atau saran, silakan buka issue baru di repository ini.
+Contributions to improve this system are welcome. Please follow these steps:
+
+1. Star this repository
+2. Fork the repository
+3. Create a feature branch
+4. Commit your changes
+5. Push to the branch
+6. Create Pull Request
+
+## Contact
+
+If you have any questions or suggestions, please open a new issue in this repository.
 
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/6285157517798)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/ryan.septiawan__/)
-
