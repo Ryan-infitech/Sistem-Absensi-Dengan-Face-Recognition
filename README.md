@@ -1,3 +1,10 @@
+<div align="right">
+
+<a href="README.md"><img src="https://flagcdn.com/w40/gb.png" width="25"></a> | <a href="README-ID"><img src="https://flagcdn.com/w40/id.png" width="20"></a>
+
+</div>
+
+<br>
 
 # Face Recognition Attendance System
 
@@ -46,14 +53,17 @@ The system consists of three main components:
     <br>
 
 ## Tech Stack
+<div align="center">
+<br>
 
 ![python](./readme/icons8-python.gif)
 ![](./readme/deepface.gif)
 ![](./readme/aws.gif)
 ![](./readme/ngrokk.gif)
-![](./readme/googlecolab.gif)
-![](./readme/opencv.gif)
 ![](./readme/websokett.gif)
+![](./readme/opencv.gif)
+![](./readme/googlecolab.gif)
+</div>
 
 ## Features
 
@@ -81,7 +91,7 @@ The system consists of three main components:
    cd face-recognition-attendance
    ```
 
-2. Install required packages:
+2. Install required packages in both side client / cloud:
 
    ```bash
    pip install -r requirements ...

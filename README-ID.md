@@ -1,3 +1,11 @@
+<div align=right>
+
+<a href="README.md"><img src="https://flagcdn.com/w40/gb.png" width="25"></a> | <a href="README-ID.md"><img src="https://flagcdn.com/w40/id.png" width="20"></a>
+
+</div>
+
+<br>
+
 # Sistem Absensi Face Recognition
 
 Sistem absensi berbasis cloud yang mengimplementasikan teknologi pengenalan wajah (face recognition) dengan integrasi cloud computing dan AWS DynamoDB .
@@ -42,15 +50,19 @@ Sistem terdiri dari tiga komponen utama:
 
 ## Tech Stack
 
+<div align="center">
+
+<br>
 
 ![python](./readme/icons8-python.gif)
 ![](./readme/deepface.gif)
 ![](./readme/aws.gif)
 ![](./readme/ngrokk.gif)
-![](./readme/googlecolab.gif)
-![](./readme/opencv.gif)
 ![](./readme/websokett.gif)
+![](./readme/opencv.gif)
+![](./readme/googlecolab.gif)
 
+</div>
 
 ## Fitur
 
@@ -77,7 +89,7 @@ Sistem terdiri dari tiga komponen utama:
     cd face-recognition-attendance
     ```
 
-2. Instalasi paket yang diperlukan:
+2. Instalasi paket yang diperlukan di client / cloud:
     ```bash
     pip install -r requirements ...
     ```
